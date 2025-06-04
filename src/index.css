@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --transition-duration: 300ms;
+}
+
+* {
+  transition: background-color var(--transition-duration), border-color var(--transition-duration);
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 dark:bg-[#242424] dark:text-gray-100;
+}
+
+/* Dark mode styles for common components */
+.dark .bg-white {
+  @apply bg-[#1B1B1B];
+}
+
+.dark .border-gray-200,
+.dark .border-gray-300,
+.dark .border-gray-700,
+.dark .border-blue-500,
+.dark .border-blue-600,
+.dark .border {
+  @apply border-[#333333];
+}
+
+.dark .text-gray-500 {
+  @apply text-[#CCCCCC];
+}
+
+.dark .text-gray-600 {
+  @apply text-[#CCCCCC];
+}
+
+.dark .text-gray-700 {
+  @apply text-[#FFFFFF];
+}
+
+.dark .text-gray-900 {
+  @apply text-white;
+}
+
+.dark .hover\:bg-gray-100:hover {
+  @apply hover:bg-[#52E360] hover:text-megen-blue;
+}
+
+/* Button hover styles */
+.dark button:hover,
+.dark a[role="button"]:hover {
+  @apply hover:bg-[#52E360] hover:text-megen-blue;
+}
+
+/* Card styles */
+.dark .shadow-sm {
+  @apply border-[#333333];
+  --tw-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.dark .shadow-md {
+  @apply border-[#333333];
+  --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dark .shadow-lg {
+  @apply border-[#333333];
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.25);
+}
+
+/* Form elements */
+.dark input,
+.dark select,
+.dark textarea {
+  @apply bg-[#1B1B1B] border-[#333333] text-white placeholder-gray-500;
+}
+
+.dark input:focus,
+.dark select:focus,
+.dark textarea:focus {
+  @apply border-[#52E360] ring-[#52E360]/20;
+}
+
+/* Interactive elements */
+.dark button:not(.bg-megen-green):not(.bg-blue-600) {
+  @apply hover:bg-[#52E360] hover:text-megen-blue;
+}
+
+/* Dropdown and modal styles */
+.dark .bg-gray-50 {
+  @apply bg-[#242424];
+}
+
+.dark [role="dialog"],
+.dark [role="menu"] {
+  @apply bg-[#1B1B1B] border-[#333333];
+}
+
+/* Status badges and indicators */
+.dark .bg-blue-100 {
+  @apply bg-blue-900/30 text-blue-200;
+}
+
+.dark .bg-green-100 {
+  @apply bg-green-900/30 text-green-200;
+}
+
+.dark .bg-yellow-100 {
+  @apply bg-yellow-900/30 text-yellow-200;
+}
+
+.dark .bg-red-100 {
+  @apply bg-red-900/30 text-red-200;
+}
+
+.dark .bg-purple-100 {
+  @apply bg-purple-900/30 text-purple-200;
+}
+
+/* Icons */
+.dark .text-gray-400 {
+  @apply text-[#52E360] hover:text-[#52E360]/80;
+}
+
+/* Specific component overrides */
+.dark .pipeline-stage {
+  @apply bg-[#242424];
+}
+
+.dark .pipeline-card {
+  @apply bg-[#1B1B1B] border-[#333333];
+}
